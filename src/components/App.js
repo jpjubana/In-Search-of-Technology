@@ -63,7 +63,7 @@ class App extends Component {
             vertical
           >
             <Container>
-              <Menu inverted pointing secondary size='large'>
+              <Menu inverted secondary size='large'>
                  <Menu.Item>
                   <span style={{fontSize: '17px'}}>In Search of Technology, &nbsp; LLC</span>
                 </Menu.Item>
@@ -95,7 +95,7 @@ class App extends Component {
                       Staffing
                     </Menu.Item>
                   </Link>
-                  <Dropdown style={{marginBottom: '2px'}} item text='More...'>
+                  <Dropdown style={{marginTop: '-5px'}} item text='More...'>
                     <Dropdown.Menu>
                       <Link to='/Careers'><Dropdown.Item>Careers</Dropdown.Item></Link>
                       <Link to='/ContactUs'><Dropdown.Item>Contact Us</Dropdown.Item></Link>

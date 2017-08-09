@@ -17,14 +17,10 @@ import Careers from './components/Careers';
 import ContactUs from './components/ContactUs';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename='/In-Search-of-Technology'>
     <App>
       <Switch>
         <Route exact path='/' component={About}/>
-        <Route path='/WhatWeDo' component={WhatWeDo}/>
-        <Route path='/Staffing' component={Staffing}/>
-        <Route path='/Careers' component={Careers}/>
-        <Route path='/ContactUs' component={ContactUs}/>
       </Switch>
     </App>
   </BrowserRouter>

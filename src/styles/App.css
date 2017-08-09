@@ -1,3 +1,7 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
 .ui.menu .dropdown.item .menu {
     background: #1B1C1D !important;
 }

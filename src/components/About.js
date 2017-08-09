@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import '../styles/App.css';
 import imge from '../Images/Web Dev.jpg'
+
 import {
   Button,
   Container,
@@ -41,15 +43,17 @@ export default class HomepageLayout extends Component {
                 inverted
                 style={{ fontSize: '1.2em', fontWeight: 'normal', marginBottom: 40, textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}
               />
-              <Button primary size='medium'>
-                Get Started
-              </Button>
+              <a href="#About">
+                <Button primary size='medium'>
+                  Get Started
+                </Button>
+              </a>
             </Container>
         </Segment>
 
         <Segment style={{ padding: '8em 0em' }} vertical>
           <Grid container stackable verticalAlign='middle'>
-            <Grid.Row>
+            <Grid.Row id='About'>
               <Grid.Column width={8}>
                 <Header as='h3' style={{ fontSize: '2em' }}>We Help Companies and Companions</Header>
                 <p style={{ fontSize: '1.33em' }}>
