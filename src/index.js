@@ -7,7 +7,6 @@ import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 //import semantic ui css
-import {Button, List, Card, Modal} from 'semantic-ui-react';
 import './styles/semantic-ui-css/semantic.min.css';
 
 //import components
