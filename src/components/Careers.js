@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 
 class Careers extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
+    this.state = {
 
-        };
-    }
+    };
+  }
 
-    render() {
-        return ( <
-            div > Careers < /div>
-        );
-    }
+  render() {
+    return (
+      <div>Careers</div>
+    );
+  }
 
 }
 

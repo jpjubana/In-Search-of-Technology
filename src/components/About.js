@@ -1,36 +1,15 @@
 import React, { Component } from 'react'
+import imge from '../Images/Web Dev.jpg'
 import {
   Button,
   Container,
   Divider,
   Grid,
   Header,
-  Icon,
   Image,
   List,
-  Menu,
   Segment,
-  Visibility,
 } from 'semantic-ui-react'
-
-const FixedMenu = () => (
-  <Menu fixed='top' size='large'>
-    <Container>
-      <Menu.Item as='a' active>Home</Menu.Item>
-      <Menu.Item as='a'>Work</Menu.Item>
-      <Menu.Item as='a'>Company</Menu.Item>
-      <Menu.Item as='a'>Careers</Menu.Item>
-      <Menu.Menu position='right'>
-        <Menu.Item className='item'>
-          <Button as='a'>Log in</Button>
-        </Menu.Item>
-        <Menu.Item>
-          <Button as='a' primary>Sign Up</Button>
-        </Menu.Item>
-      </Menu.Menu>
-    </Container>
-  </Menu>
-)
 
 export default class HomepageLayout extends Component {
   state = {}
@@ -39,8 +18,35 @@ export default class HomepageLayout extends Component {
   showFixedMenu = () => this.setState({ visible: true })
 
   render() {
+  const { visible, activeItem } = this.state;
+
     return (
       <div>
+        <Segment
+          inverted
+          textAlign='center'
+          style={{minHeight: 500}}
+          vertical
+        >
+          <Container text>
+              <Header
+                as='h1'
+                content='Technology Consulting & Strategy'
+                inverted
+                style={{ fontSize: '2.9em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em', textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}
+              />
+              <Header
+                as='h2'
+                content='Do whatever you want when you want to.'
+                inverted
+                style={{ fontSize: '1.2em', fontWeight: 'normal', marginBottom: 40, textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)' }}
+              />
+              <Button primary size='medium'>
+                Get Started
+              </Button>
+            </Container>
+        </Segment>
+
         <Segment style={{ padding: '8em 0em' }} vertical>
           <Grid container stackable verticalAlign='middle'>
             <Grid.Row>
@@ -60,7 +66,7 @@ export default class HomepageLayout extends Component {
                   bordered
                   rounded
                   size='large'
-                  src='/assets/images/wireframe/white-image.png'
+                  src={imge}
                 />
               </Grid.Column>
             </Grid.Row>
@@ -81,7 +87,6 @@ export default class HomepageLayout extends Component {
               <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                 <Header as='h3' style={{ fontSize: '2em' }}>"I shouldn't have gone with their competitor."</Header>
                 <p style={{ fontSize: '1.33em' }}>
-                  <Image avatar src='/assets/images/avatar/large/nan.jpg' />
                   <b>Nan</b> Chief Fun Officer Acme Toys
                 </p>
               </Grid.Column>

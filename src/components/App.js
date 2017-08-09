@@ -4,14 +4,7 @@ import '../styles/App.css';
 import {Link} from 'react-router-dom';
 
 import {
-  Button,
   Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
   Menu,
   Segment,
   Visibility,
@@ -28,14 +21,14 @@ class App extends Component {
   render() {
     const { visible, activeItem } = this.state;
     const FixedMenu = () => (
-      <Menu fixed='top' size='large'>
+      <Menu inverted fixed='top' size='large'>
         <Container>
           <Menu.Item>
-            <span>TECHNOLOGY CONSULTING & STRATEGY</span>
+            <span style={{fontSize: '17px'}}>In Search of Technology, &nbsp; LLC</span>
           </Menu.Item>
           <Menu.Menu position='right'>
             <Link to='/'>
-              <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}/>
+              <Menu.Item name='who we are' active={activeItem === 'who we are'} onClick={this.handleItemClick}/>
             </Link>
             <Link to='/WhatWeDo'>
               <Menu.Item name='what we do' active={activeItem === 'what we do'} onClick={this.handleItemClick}/>
@@ -66,13 +59,13 @@ class App extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ minHeight: 75, padding: '1em 0em' }}
             vertical
           >
             <Container>
               <Menu inverted pointing secondary size='large'>
                  <Menu.Item>
-                  <span>TECHNOLOGY CONSULTING & STRATEGY</span>
+                  <span style={{fontSize: '17px'}}>In Search of Technology, &nbsp; LLC</span>
                 </Menu.Item>
                 <Menu.Menu position='right'>
                   <Link to='/'>
@@ -102,7 +95,7 @@ class App extends Component {
                       Staffing
                     </Menu.Item>
                   </Link>
-                  <Dropdown item text='More'>
+                  <Dropdown style={{marginBottom: '2px'}} item text='More...'>
                     <Dropdown.Menu>
                       <Link to='/Careers'><Dropdown.Item>Careers</Dropdown.Item></Link>
                       <Link to='/ContactUs'><Dropdown.Item>Contact Us</Dropdown.Item></Link>
@@ -110,25 +103,6 @@ class App extends Component {
                   </Dropdown>
                 </Menu.Menu>
               </Menu>
-            </Container>
-
-            <Container text>
-              <Header
-                as='h1'
-                content='Imagine-a-Company'
-                inverted
-                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
-              />
-              <Header
-                as='h2'
-                content='Do whatever you want when you want to.'
-                inverted
-                style={{ fontSize: '1.7em', fontWeight: 'normal' }}
-              />
-              <Button primary size='huge'>
-                Get Started
-                <Icon name='right arrow' />
-              </Button>
             </Container>
           </Segment>
         </Visibility>
